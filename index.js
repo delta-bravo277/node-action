@@ -1,6 +1,6 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
-const entrypoint = require('/entrypoint');
+const entrypoint = require('/entrypoint.sh');
 try {
     const { exec } = require('child_process');
     var yourscript = exec('sh /entrypoint.sh',
