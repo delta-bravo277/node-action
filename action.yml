@@ -12,4 +12,4 @@ outputs:
     description: 'patch/minor/major'
 runs:
   using: 'node16'
-  main: 'entrypoint.sh'
+  main: 'index.js'
