@@ -2,7 +2,7 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 try {
     const { exec } = require('child_process');
-    var yourscript = exec('sh /home/runner/work/node-action/node-action/entrypoint.sh',
+    var yourscript = exec('sh /entrypoint.sh',
         (error, stdout, stderr) => {
             console.log(stdout);
             console.log(stderr);
