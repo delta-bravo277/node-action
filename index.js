@@ -1,5 +1,8 @@
-const { exec } = require('child_process');
-var yourscript = exec('sh entrypoint.sh',
+const core = require('@actions/core');
+const github = require('@actions/github');
+try {
+    const { exec } = require('child_process');
+    var yourscript = exec('sh entrypoint.sh',
         (error, stdout, stderr) => {
             console.log(stdout);
             console.log(stderr);
@@ -7,3 +10,7 @@ var yourscript = exec('sh entrypoint.sh',
                 console.log(`exec error: ${error}`);
             }
         });
+
+} catch (error) {
+    core.setFailed(error.message);
+}
